@@ -1,0 +1,197 @@
+// In this scss you can overwrite all our scss, we suggested you to add your scss into this, so whenever the update comes it will not affect your code.
+
+// 11th April 2022 - Updation by Twinkle
+.docs {
+  a{
+    text-decoration: none;
+  }
+  &#main-wrapper[data-layout=vertical]{
+    .container-fluid{
+      min-height: calc(100vh - 120px);
+    }
+    .left-sidebar[data-sidebarbg=skin6]{
+      box-shadow: none;
+      border-right: 1px solid #e9ecef;
+      background: #fff;
+      .sidebar-nav {
+        &>ul{
+          padding: 0 20px;
+        }    
+        .hide-menu{
+          display: block;
+        }
+        .nav-small-cap{
+          font-size: 13px;
+          font-weight: 500;
+          color: #bcc3d3;
+          opacity: 0.9;
+          justify-content: start;
+          padding: 12px 30px;
+        }
+        ul{
+          .sidebar-item{
+            width: 210px;
+            &.selected{
+              opacity: 1;
+              > .sidebar-link{ 
+                &.active:not(.has-arrow) {
+                  background: black;
+                  border-radius: 6px;
+                  .hide-menu {
+                      color: white;
+                  }
+                }
+              }
+
+              .first-level {
+                .sidebar-link{ 
+                  &.active {
+                    background: black;
+                    border-radius: 6px;
+                    .hide-menu {
+                        color: white;
+                    }
+                  }
+                }
+              }
+            }
+            .sidebar-link{
+              text-decoration: none;
+              margin-bottom: 8px;
+              color: #607d8b;
+              padding: 12px 30px;
+              font-size: 15px;
+              font-weight: 400;
+              opacity: 0.9;
+            }
+          }
+        }
+      }  
+    }
+    .footer{
+      font-size: 16px;
+      color: #607d8b;
+      background: #fff;
+      border-top: 1px solid #e9ecef;
+      padding: 17px 15px
+     }
+  }
+  
+	.page-wrapper {
+	  background: white;
+    &>.container-fluid{
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+   
+    pre, code {
+      margin-bottom: 0;
+      border-radius: 10px;
+      font-size: 15px;
+  }
+  code{
+    padding: 0;
+  }
+  .card-subtitle{
+    color: $gray-500;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .card {
+		border: 1px solid #ecf0f2;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    .card-body {
+    padding: 30px;
+     ul{
+       li{
+         a{
+          // text-decoration: none !important;
+          }
+         }
+        }  
+      }
+	   }
+	}
+	.topbar{
+    box-shadow: none;
+    .top-navbar{
+       .navbar-header{
+         border-right: 1px solid #e9ecef;
+         .navbar-brand{
+           padding: 0 30px;
+           &>a{
+            // text-decoration: none;
+           }
+          background: #fff;
+        }
+        .nav-toggler{
+          // text-decoration: none;
+        }
+      }
+    }
+  }
+ tbody{
+   td{
+     a{
+      //  text-decoration: none;
+     }
+   }
+ }
+}
+
+@media(min-width:160px){
+  .docs{
+    .topbar{
+      .top-navbar{
+        .navbar-header{
+          border:1px solid #e9ecef;
+         
+        }
+      }
+    }
+  }
+}
+
+@media(min-width:768px){
+  .docs{
+    &#main-wrapper[data-layout=vertical][data-sidebartype=mini-sidebar] {
+      .page-wrapper {
+        margin-left: 0;
+      }
+      .left-sidebar[data-sidebarbg=skin6]{
+        width: 250px;      
+      }
+    }
+    .topbar{
+      .top-navbar{
+        .navbar-header{
+          border-right: 1px solid #e9ecef;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+          .nav-toggler{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width:1170px){
+  .docs{
+    .topbar{
+      .top-navbar{
+        .navbar-header{
+          border-bottom: none;
+           .nav-toggler{
+             text-decoration: none;
+             display: none;
+           }
+        }
+      }
+    }
+  }
+}
