@@ -35,7 +35,7 @@
               opacity: 1;
               > .sidebar-link{ 
                 &.active:not(.has-arrow) {
-                  background: black;
+                  background: $themecolor;
                   border-radius: 6px;
                   .hide-menu {
                       color: white;
@@ -46,7 +46,7 @@
               .first-level {
                 .sidebar-link{ 
                   &.active {
-                    background: black;
+                    background: $themecolor;
                     border-radius: 6px;
                     .hide-menu {
                         color: white;
